@@ -1,0 +1,25 @@
+<body>
+    With click():<br />
+    <ul id="click">
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+    </ul>
+    <br /><br />
+    With on():<br />
+    <ul id="on">
+        <li>List item</li>
+        <li>List item</li>
+        <li>List item</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        $('#click li').click(function () {
+            $(this).parent().append($('<li>List item</li>'));
+        });
+
+        $('#on').on('click', 'li', function () {
+            $(this).parent().append($('<li>List item</li>'));
+        });
+    </script>
+</body>
